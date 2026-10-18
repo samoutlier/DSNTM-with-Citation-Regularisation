@@ -1,0 +1,333 @@
+2026-08-08 14:29:42  device=cuda  V=15483  T=7  train=67328  valid=7921
+2026-08-08 14:29:42  args: {'data_dir': 'data/processed', 'save_dir': 'runs/dsntm_k30_cit', 'num_topics': 30, 'rho_size': 300, 't_hidden_size': 800, 'eta_hidden_size': 200, 'eta_nlayers': 3, 'num_heads': 10, 'delta': 0.005, 'train_embeddings': 0, 'enc_drop': 0.0, 'eta_dropout': 0.0, 'citation': True, 'citation_file': 'data/citations/citation_matrices.pkl', 'c_weight': 1.0, 'citation_docs_per_slice': 4000, 'citation_min_cites': 4, 'lr': 0.0006, 'wdecay': 1.2e-06, 'lr_factor': 4.0, 'anneal_lr': 1, 'nonmono': 3, 'epochs': 400, 'eval_every': 5, 'patience': 6, 'min_delta': 1.0, 'batch_size': 512, 'eval_batch_size': 1000, 'bow_norm': 1, 'clip': 0.0, 'seed': 2019}
+2026-08-08 14:29:42  learnable parameters: 17,997,820
+2026-08-08 14:29:42  loading citation data from data/citations/citation_matrices.pkl
+2026-08-08 14:29:45    slice sizes (full): [1299, 1949, 3338, 5331, 10798, 18872, 25741]
+2026-08-08 14:29:45    citations (full): 440,655
+2026-08-08 14:29:45    slice sizes (subsampled to <= 4000): [1299, 1949, 3338, 4000, 4000, 4000, 4000]
+2026-08-08 14:29:46    citations retained after subsampling: 224,130 (50.9% of full graph)
+2026-08-08 14:29:46    citation tensors on cuda: ~2.26 GB
+2026-08-08 14:29:46  citation regularization ON  (c_weight=1.0, min_citation_count=4)
+2026-08-08 14:30:22  epoch   1  lr 6.00e-04  nelbo 58905225.1  nll 54721092.4  kl_theta 64630.1  kl_eta 5224.32  kl_alpha 2025714.4  cit 2088564.0
+2026-08-08 14:30:57  epoch   2  lr 6.00e-04  nelbo 55385982.8  nll 52643365.5  kl_theta 7343.5  kl_eta 768.71  kl_alpha 652812.1  cit 2081693.1
+2026-08-08 14:31:33  epoch   3  lr 6.00e-04  nelbo 54856962.7  nll 52216997.5  kl_theta 32896.6  kl_eta 510.65  kl_alpha 441697.2  cit 2164861.0
+2026-08-08 14:32:09  epoch   4  lr 6.00e-04  nelbo 53816225.4  nll 51264032.1  kl_theta 36899.4  kl_eta 333.39  kl_alpha 305336.7  cit 2209623.6
+2026-08-08 14:32:46  epoch   5  lr 6.00e-04  nelbo 53657435.2  nll 51196404.1  kl_theta 36991.9  kl_eta 296.31  kl_alpha 217993.6  cit 2205749.5
+2026-08-08 14:32:46    >> VAL PPL 5005.1  (best inf @ 0)  *improved*
+2026-08-08 14:33:23  epoch   6  lr 6.00e-04  nelbo 53574594.1  nll 51164400.2  kl_theta 36819.0  kl_eta 282.79  kl_alpha 171508.3  cit 2201583.3
+2026-08-08 14:34:01  epoch   7  lr 6.00e-04  nelbo 53736169.9  nll 51297817.3  kl_theta 45976.0  kl_eta 297.14  kl_alpha 179052.0  cit 2213027.5
+2026-08-08 14:34:39  epoch   8  lr 6.00e-04  nelbo 53563629.2  nll 51156523.4  kl_theta 37116.8  kl_eta 326.57  kl_alpha 157598.7  cit 2212063.5
+2026-08-08 14:35:17  epoch   9  lr 6.00e-04  nelbo 53516497.5  nll 51142945.1  kl_theta 35853.0  kl_eta 343.36  kl_alpha 127325.1  cit 2210031.2
+2026-08-08 14:35:55  epoch  10  lr 6.00e-04  nelbo 53482278.6  nll 51131910.9  kl_theta 34363.0  kl_eta 364.34  kl_alpha 107587.9  cit 2208052.5
+2026-08-08 14:35:56    >> VAL PPL 5010.6  (best 5005.1 @ 5)
+2026-08-08 14:36:34  epoch  11  lr 6.00e-04  nelbo 53450096.4  nll 51111810.9  kl_theta 35618.9  kl_eta 387.45  kl_alpha 94343.0  cit 2207936.5
+2026-08-08 14:37:12  epoch  12  lr 6.00e-04  nelbo 53427163.4  nll 51091836.9  kl_theta 42214.8  kl_eta 384.75  kl_alpha 88143.6  cit 2204583.2
+2026-08-08 14:37:50  epoch  13  lr 6.00e-04  nelbo 52834369.3  nll 50419887.1  kl_theta 73430.6  kl_eta 394.21  kl_alpha 87643.4  cit 2253014.1
+2026-08-08 14:38:29  epoch  14  lr 6.00e-04  nelbo 52588314.7  nll 50177377.9  kl_theta 73187.7  kl_eta 414.04  kl_alpha 78480.4  cit 2258854.9
+2026-08-08 14:39:07  epoch  15  lr 6.00e-04  nelbo 55091892.2  nll 52461590.1  kl_theta 51721.1  kl_eta 411.34  kl_alpha 237192.9  cit 2340976.6
+2026-08-08 14:39:07    >> VAL PPL 5492.4  (best 5005.1 @ 5)
+2026-08-08 14:39:45  epoch  16  lr 6.00e-04  nelbo 54002067.2  nll 51545209.2  kl_theta 68367.6  kl_eta 610.89  kl_alpha 111522.9  cit 2276356.6
+2026-08-08 14:40:24  epoch  17  lr 6.00e-04  nelbo 53822732.8  nll 51435763.3  kl_theta 48727.2  kl_eta 533.59  kl_alpha 86974.6  cit 2250734.2
+2026-08-08 14:41:02  epoch  18  lr 6.00e-04  nelbo 53787414.1  nll 51415405.8  kl_theta 43204.2  kl_eta 558.98  kl_alpha 76349.3  cit 2251895.7
+2026-08-08 14:41:40  epoch  19  lr 6.00e-04  nelbo 55958278.5  nll 53226821.2  kl_theta 22487.8  kl_eta 696.72  kl_alpha 144250.5  cit 2564022.6
+2026-08-08 14:42:18  epoch  20  lr 6.00e-04  nelbo 55070766.6  nll 52487648.0  kl_theta 5629.1  kl_eta 910.42  kl_alpha 89221.0  cit 2487357.9
+2026-08-08 14:42:18    >> VAL PPL 6233.1  (best 5005.1 @ 5)
+2026-08-08 14:42:18    >> annealing lr -> 1.50e-04
+2026-08-08 14:42:56  epoch  21  lr 1.50e-04  nelbo 55001197.3  nll 52429780.4  kl_theta 5306.2  kl_eta 896.50  kl_alpha 77721.5  cit 2487492.7
+2026-08-08 14:43:34  epoch  22  lr 1.50e-04  nelbo 54981758.6  nll 52413316.5  kl_theta 5012.8  kl_eta 874.97  kl_alpha 74924.0  cit 2487630.6
+2026-08-08 14:44:13  epoch  23  lr 1.50e-04  nelbo 54989759.6  nll 52423745.5  kl_theta 4915.3  kl_eta 858.97  kl_alpha 72579.4  cit 2487660.8
+2026-08-08 14:44:51  epoch  24  lr 1.50e-04  nelbo 54987716.7  nll 52424057.1  kl_theta 4761.0  kl_eta 866.58  kl_alpha 70503.4  cit 2487528.6
+2026-08-08 14:45:29  epoch  25  lr 1.50e-04  nelbo 54984613.8  nll 52422923.3  kl_theta 4741.5  kl_eta 874.77  kl_alpha 68621.2  cit 2487453.1
+2026-08-08 14:45:29    >> VAL PPL 6183.9  (best 5005.1 @ 5)
+2026-08-08 14:45:29    >> annealing lr -> 3.75e-05
+2026-08-08 14:46:08  epoch  26  lr 3.75e-05  nelbo 54967161.7  nll 52406875.1  kl_theta 4662.0  kl_eta 875.80  kl_alpha 67373.6  cit 2487375.1
+2026-08-08 14:46:46  epoch  27  lr 3.75e-05  nelbo 54966203.6  nll 52406754.3  kl_theta 4656.5  kl_eta 880.51  kl_alpha 66871.8  cit 2487040.4
+2026-08-08 14:47:24  epoch  28  lr 3.75e-05  nelbo 54966613.6  nll 52407024.9  kl_theta 4628.2  kl_eta 876.78  kl_alpha 66471.4  cit 2487612.3
+2026-08-08 14:48:03  epoch  29  lr 3.75e-05  nelbo 54968841.4  nll 52409926.0  kl_theta 4615.5  kl_eta 873.96  kl_alpha 66020.2  cit 2487405.7
+2026-08-08 14:48:41  epoch  30  lr 3.75e-05  nelbo 54976589.5  nll 52418487.1  kl_theta 4577.4  kl_eta 884.17  kl_alpha 65600.6  cit 2487040.0
+2026-08-08 14:48:41    >> VAL PPL 6156.9  (best 5005.1 @ 5)
+2026-08-08 14:48:41    >> annealing lr -> 9.37e-06
+2026-08-08 14:49:20  epoch  31  lr 9.37e-06  nelbo 54959660.2  nll 52401569.3  kl_theta 4596.8  kl_eta 884.32  kl_alpha 65279.8  cit 2487330.1
+2026-08-08 14:49:58  epoch  32  lr 9.37e-06  nelbo 54970084.4  nll 52412084.2  kl_theta 4519.2  kl_eta 882.90  kl_alpha 65187.3  cit 2487411.0
+2026-08-08 14:50:36  epoch  33  lr 9.37e-06  nelbo 54957944.4  nll 52399600.5  kl_theta 4517.3  kl_eta 884.28  kl_alpha 65106.1  cit 2487836.2
+2026-08-08 14:51:15  epoch  34  lr 9.37e-06  nelbo 54964129.3  nll 52406164.6  kl_theta 4657.2  kl_eta 886.71  kl_alpha 64937.5  cit 2487483.4
+2026-08-08 14:51:53  epoch  35  lr 9.37e-06  nelbo 54959450.7  nll 52401463.7  kl_theta 4603.5  kl_eta 888.09  kl_alpha 64822.1  cit 2487673.3
+2026-08-08 14:51:53    >> VAL PPL 6152.6  (best 5005.1 @ 5)
+2026-08-08 14:51:53  early stopping: no val improvement > 1.0 for 6 evaluations
+2026-08-08 14:51:53  training done in 22.1 min; best val ppl 5005.1 at epoch 5
+2026-08-08 14:51:53  saved runs/dsntm_k30_cit/best_model.pt
+2026-08-09 00:29:21  device=cuda  V=15483  T=7  train=67328  valid=7921
+2026-08-09 00:29:21  args: {'data_dir': 'data/processed', 'save_dir': 'runs/dsntm_k30_cit', 'num_topics': 30, 'rho_size': 300, 't_hidden_size': 800, 'eta_hidden_size': 200, 'eta_nlayers': 3, 'num_heads': 10, 'delta': 0.005, 'train_embeddings': 0, 'enc_drop': 0.0, 'eta_dropout': 0.0, 'citation': True, 'citation_file': 'data/citations/citation_matrices.pkl', 'c_weight': 1.0, 'citation_docs_per_slice': 4000, 'citation_min_cites': 4, 'lr': 0.0006, 'wdecay': 1.2e-06, 'lr_factor': 4.0, 'anneal_lr': 1, 'nonmono': 3, 'epochs': 400, 'eval_every': 5, 'patience': 6, 'min_delta': 1.0, 'batch_size': 512, 'eval_batch_size': 1000, 'bow_norm': 1, 'clip': 0.0, 'seed': 2019}
+2026-08-09 00:29:21  learnable parameters: 17,997,820
+2026-08-09 00:29:21  loading citation data from data/citations/citation_matrices.pkl
+2026-08-09 00:29:24    slice sizes (full): [1299, 1949, 3338, 5331, 10798, 18872, 25741]
+2026-08-09 00:29:24    citations (full): 440,655
+2026-08-09 00:29:24    slice sizes (subsampled to <= 4000): [1299, 1949, 3338, 4000, 4000, 4000, 4000]
+2026-08-09 00:29:25    citations retained after subsampling: 224,130 (50.9% of full graph)
+2026-08-09 00:29:26    citation tensors on cuda: ~2.26 GB
+2026-08-09 00:29:26  citation regularization ON  (c_weight=1.0, min_citation_count=4)
+2026-08-09 00:29:26  citation_scale = 1/132 = 0.00758  (so L_cit contributes once per epoch, not once per batch)
+2026-08-09 00:30:01  epoch   1  lr 6.00e-04  nelbo 56741197.6  nll 54678415.4  kl_theta 5101.0  kl_eta 5855.16  kl_alpha 2035685.7  cit 16140.4
+2026-08-09 00:30:36  epoch   2  lr 6.00e-04  nelbo 53299001.2  nll 52619461.5  kl_theta 3541.4  kl_eta 726.52  kl_alpha 658921.6  cit 16350.2
+2026-08-09 00:31:12  epoch   3  lr 6.00e-04  nelbo 52563783.4  nll 52114459.5  kl_theta 4739.8  kl_eta 539.04  kl_alpha 427071.4  cit 16973.8
+2026-08-09 00:31:48  epoch   4  lr 6.00e-04  nelbo 50857347.5  nll 50531650.7  kl_theta 8914.1  kl_eta 398.75  kl_alpha 298690.8  cit 17693.3
+2026-08-09 00:32:24  epoch   5  lr 6.00e-04  nelbo 48324664.2  nll 48075024.5  kl_theta 17859.3  kl_eta 364.54  kl_alpha 213480.2  cit 17935.7
+2026-08-09 00:32:24    >> VAL PPL 2622.0  (best inf @ 0)  *improved*
+2026-08-09 00:33:01  epoch   6  lr 6.00e-04  nelbo 47147226.1  nll 46946710.1  kl_theta 21171.6  kl_eta 290.85  kl_alpha 161161.5  cit 17892.1
+2026-08-09 00:33:38  epoch   7  lr 6.00e-04  nelbo 46497711.5  nll 46322958.8  kl_theta 21542.8  kl_eta 256.72  kl_alpha 135175.6  cit 17777.5
+2026-08-09 00:34:15  epoch   8  lr 6.00e-04  nelbo 46093246.0  nll 45935455.8  kl_theta 21281.8  kl_eta 261.69  kl_alpha 118564.9  cit 17681.7
+2026-08-09 00:34:53  epoch   9  lr 6.00e-04  nelbo 45820305.2  nll 45675362.4  kl_theta 20804.3  kl_eta 266.83  kl_alpha 106305.6  cit 17566.2
+2026-08-09 00:35:31  epoch  10  lr 6.00e-04  nelbo 45622462.8  nll 45486663.4  kl_theta 20497.0  kl_eta 271.98  kl_alpha 97558.4  cit 17472.0
+2026-08-09 00:35:31    >> VAL PPL 1924.3  (best 2622.0 @ 5)  *improved*
+2026-08-09 00:36:09  epoch  11  lr 6.00e-04  nelbo 45471129.2  nll 45342761.4  kl_theta 20445.1  kl_eta 275.06  kl_alpha 90248.6  cit 17399.2
+2026-08-09 00:36:47  epoch  12  lr 6.00e-04  nelbo 45342323.0  nll 45219285.2  kl_theta 20398.1  kl_eta 278.27  kl_alpha 85049.3  cit 17312.0
+2026-08-09 00:37:25  epoch  13  lr 6.00e-04  nelbo 45251994.6  nll 45133142.4  kl_theta 20550.9  kl_eta 280.67  kl_alpha 80787.1  cit 17233.5
+2026-08-09 00:38:03  epoch  14  lr 6.00e-04  nelbo 45162762.8  nll 45047035.9  kl_theta 20704.6  kl_eta 282.54  kl_alpha 77575.2  cit 17164.3
+2026-08-09 00:38:41  epoch  15  lr 6.00e-04  nelbo 45098512.2  nll 44985556.9  kl_theta 20797.4  kl_eta 287.35  kl_alpha 74787.4  cit 17083.1
+2026-08-09 00:38:42    >> VAL PPL 1790.8  (best 1924.3 @ 10)  *improved*
+2026-08-09 00:39:20  epoch  16  lr 6.00e-04  nelbo 45019958.3  nll 44909098.8  kl_theta 20812.8  kl_eta 289.44  kl_alpha 72733.7  cit 17023.5
+2026-08-09 00:39:58  epoch  17  lr 6.00e-04  nelbo 44957030.1  nll 44848041.2  kl_theta 20755.9  kl_eta 290.57  kl_alpha 70992.1  cit 16950.3
+2026-08-09 00:40:36  epoch  18  lr 6.00e-04  nelbo 44900130.6  nll 44792315.8  kl_theta 20760.7  kl_eta 286.66  kl_alpha 69854.5  cit 16912.7
+2026-08-09 00:41:13  epoch  19  lr 6.00e-04  nelbo 44853859.0  nll 44747648.1  kl_theta 20685.6  kl_eta 285.87  kl_alpha 68393.5  cit 16846.1
+2026-08-09 00:41:51  epoch  20  lr 6.00e-04  nelbo 44812209.9  nll 44706695.5  kl_theta 20750.4  kl_eta 284.32  kl_alpha 67670.0  cit 16809.5
+2026-08-09 00:41:52    >> VAL PPL 1716.7  (best 1790.8 @ 15)  *improved*
+2026-08-09 00:42:29  epoch  21  lr 6.00e-04  nelbo 44771154.1  nll 44666229.0  kl_theta 20827.7  kl_eta 287.96  kl_alpha 67075.6  cit 16734.1
+2026-08-09 00:43:07  epoch  22  lr 6.00e-04  nelbo 44725839.1  nll 44621612.9  kl_theta 20819.7  kl_eta 290.47  kl_alpha 66438.0  cit 16678.0
+2026-08-09 00:43:45  epoch  23  lr 6.00e-04  nelbo 44705203.7  nll 44601251.3  kl_theta 20922.2  kl_eta 290.83  kl_alpha 66119.6  cit 16619.9
+2026-08-09 00:44:23  epoch  24  lr 6.00e-04  nelbo 44818997.1  nll 44711236.0  kl_theta 20842.8  kl_eta 288.34  kl_alpha 70013.9  cit 16616.4
+2026-08-09 00:45:01  epoch  25  lr 6.00e-04  nelbo 53621228.8  nll 52833094.0  kl_theta 13297.6  kl_eta 385.02  kl_alpha 708778.6  cit 65673.3
+2026-08-09 00:45:01    >> VAL PPL 6347.1  (best 1716.7 @ 20)
+2026-08-09 00:45:01    >> annealing lr -> 1.50e-04
+2026-08-09 00:45:39  epoch  26  lr 1.50e-04  nelbo 52457352.4  nll 51994348.2  kl_theta 17821.1  kl_eta 427.55  kl_alpha 353950.9  cit 90804.4
+2026-08-09 00:46:17  epoch  27  lr 1.50e-04  nelbo 53025040.8  nll 52481297.1  kl_theta 14788.4  kl_eta 321.62  kl_alpha 438125.3  cit 90508.4
+2026-08-09 00:46:55  epoch  28  lr 1.50e-04  nelbo 52367346.8  nll 51887523.8  kl_theta 16254.0  kl_eta 456.28  kl_alpha 362374.2  cit 100738.7
+2026-08-09 00:47:32  epoch  29  lr 1.50e-04  nelbo 50445384.5  nll 50078576.5  kl_theta 20417.2  kl_eta 409.81  kl_alpha 274966.5  cit 71014.6
+2026-08-09 00:48:10  epoch  30  lr 1.50e-04  nelbo 45494752.2  nll 45335312.8  kl_theta 20695.1  kl_eta 323.88  kl_alpha 114520.7  cit 23899.7
+2026-08-09 00:48:11    >> VAL PPL 1780.9  (best 1716.7 @ 20)
+2026-08-09 00:48:48  epoch  31  lr 1.50e-04  nelbo 44912558.0  nll 44776038.3  kl_theta 21502.5  kl_eta 378.28  kl_alpha 92625.1  cit 22013.8
+2026-08-09 00:49:26  epoch  32  lr 1.50e-04  nelbo 44810738.0  nll 44680378.3  kl_theta 21383.9  kl_eta 413.79  kl_alpha 86643.6  cit 21918.7
+2026-08-09 00:50:04  epoch  33  lr 1.50e-04  nelbo 44741357.4  nll 44614736.9  kl_theta 21250.2  kl_eta 440.83  kl_alpha 83088.7  cit 21841.1
+2026-08-09 00:50:42  epoch  34  lr 1.50e-04  nelbo 44712866.2  nll 44588984.2  kl_theta 21155.2  kl_eta 462.66  kl_alpha 80501.5  cit 21762.9
+2026-08-09 00:51:20  epoch  35  lr 1.50e-04  nelbo 44681689.8  nll 44559964.0  kl_theta 21101.2  kl_eta 480.84  kl_alpha 78415.2  cit 21728.7
+2026-08-09 00:51:20    >> VAL PPL 1680.3  (best 1716.7 @ 20)  *improved*
+2026-08-09 00:51:58  epoch  36  lr 1.50e-04  nelbo 44652347.4  nll 44532439.1  kl_theta 21047.7  kl_eta 498.32  kl_alpha 76753.8  cit 21608.3
+2026-08-09 00:52:36  epoch  37  lr 1.50e-04  nelbo 44643525.4  nll 44525488.9  kl_theta 20999.4  kl_eta 511.95  kl_alpha 74904.0  cit 21621.4
+2026-08-09 00:53:14  epoch  38  lr 1.50e-04  nelbo 44626622.7  nll 44510914.8  kl_theta 20969.3  kl_eta 524.43  kl_alpha 72782.1  cit 21432.1
+2026-08-09 00:53:52  epoch  39  lr 1.50e-04  nelbo 44609018.0  nll 44494129.2  kl_theta 20914.8  kl_eta 536.23  kl_alpha 72097.6  cit 21340.0
+2026-08-09 00:54:30  epoch  40  lr 1.50e-04  nelbo 44596462.6  nll 44482637.3  kl_theta 20906.3  kl_eta 546.78  kl_alpha 71271.2  cit 21101.3
+2026-08-09 00:54:31    >> VAL PPL 1660.8  (best 1680.3 @ 35)  *improved*
+2026-08-09 00:55:09  epoch  41  lr 1.50e-04  nelbo 44589455.3  nll 44476234.5  kl_theta 20905.7  kl_eta 555.05  kl_alpha 70808.7  cit 20950.8
+2026-08-09 00:55:47  epoch  42  lr 1.50e-04  nelbo 44569975.9  nll 44457718.6  kl_theta 20880.0  kl_eta 562.41  kl_alpha 70071.4  cit 20743.6
+2026-08-09 00:56:25  epoch  43  lr 1.50e-04  nelbo 44570321.3  nll 44458414.4  kl_theta 20879.7  kl_eta 567.92  kl_alpha 69845.4  cit 20613.7
+2026-08-09 00:57:03  epoch  44  lr 1.50e-04  nelbo 44559338.1  nll 44447833.9  kl_theta 20893.3  kl_eta 573.41  kl_alpha 69433.2  cit 20604.3
+2026-08-09 00:57:42  epoch  45  lr 1.50e-04  nelbo 44546122.3  nll 44434935.0  kl_theta 20875.3  kl_eta 576.74  kl_alpha 69257.1  cit 20478.1
+2026-08-09 00:57:42    >> VAL PPL 1651.7  (best 1660.8 @ 40)  *improved*
+2026-08-09 00:58:20  epoch  46  lr 1.50e-04  nelbo 44539468.3  nll 44429276.0  kl_theta 20883.0  kl_eta 580.62  kl_alpha 68474.8  cit 20253.7
+2026-08-09 00:58:58  epoch  47  lr 1.50e-04  nelbo 44529412.4  nll 44419431.8  kl_theta 20864.7  kl_eta 584.49  kl_alpha 68427.4  cit 20103.8
+2026-08-09 00:59:37  epoch  48  lr 1.50e-04  nelbo 44523986.7  nll 44414452.2  kl_theta 20874.2  kl_eta 587.66  kl_alpha 68010.2  cit 20062.3
+2026-08-09 01:00:15  epoch  49  lr 1.50e-04  nelbo 44506081.4  nll 44396911.2  kl_theta 20866.0  kl_eta 590.13  kl_alpha 67903.5  cit 19810.2
+2026-08-09 01:00:53  epoch  50  lr 1.50e-04  nelbo 44513602.6  nll 44404608.0  kl_theta 20913.0  kl_eta 592.13  kl_alpha 67687.9  cit 19801.6
+2026-08-09 01:00:54    >> VAL PPL 1637.9  (best 1651.7 @ 45)  *improved*
+2026-08-09 01:01:32  epoch  51  lr 1.50e-04  nelbo 44497611.5  nll 44388936.3  kl_theta 20900.5  kl_eta 594.02  kl_alpha 67512.0  cit 19668.9
+2026-08-09 01:02:10  epoch  52  lr 1.50e-04  nelbo 44499806.9  nll 44391238.0  kl_theta 20934.9  kl_eta 596.34  kl_alpha 67424.2  cit 19613.7
+2026-08-09 01:02:49  epoch  53  lr 1.50e-04  nelbo 44486824.4  nll 44378600.5  kl_theta 20926.2  kl_eta 596.96  kl_alpha 67317.2  cit 19384.3
+2026-08-09 01:03:27  epoch  54  lr 1.50e-04  nelbo 44488649.0  nll 44380221.7  kl_theta 20941.9  kl_eta 597.97  kl_alpha 67382.1  cit 19505.4
+2026-08-09 01:04:06  epoch  55  lr 1.50e-04  nelbo 44465963.6  nll 44357979.5  kl_theta 20971.2  kl_eta 599.11  kl_alpha 67039.0  cit 19374.4
+2026-08-09 01:04:06    >> VAL PPL 1630.4  (best 1637.9 @ 50)  *improved*
+2026-08-09 01:04:44  epoch  56  lr 1.50e-04  nelbo 44465044.6  nll 44356916.3  kl_theta 20948.7  kl_eta 600.58  kl_alpha 67169.7  cit 19409.7
+2026-08-09 01:05:23  epoch  57  lr 1.50e-04  nelbo 44467218.6  nll 44359228.1  kl_theta 21036.3  kl_eta 599.79  kl_alpha 67144.6  cit 19209.8
+2026-08-09 01:06:01  epoch  58  lr 1.50e-04  nelbo 44459902.3  nll 44351945.2  kl_theta 21060.9  kl_eta 597.38  kl_alpha 67074.1  cit 19225.2
+2026-08-09 01:06:39  epoch  59  lr 1.50e-04  nelbo 44450736.4  nll 44343052.1  kl_theta 21058.3  kl_eta 596.26  kl_alpha 66939.5  cit 19090.1
+2026-08-09 01:07:18  epoch  60  lr 1.50e-04  nelbo 44447456.4  nll 44339838.0  kl_theta 21105.6  kl_eta 595.30  kl_alpha 66891.4  cit 19025.9
+2026-08-09 01:07:18    >> VAL PPL 1627.0  (best 1630.4 @ 55)  *improved*
+2026-08-09 01:07:56  epoch  61  lr 1.50e-04  nelbo 44444861.8  nll 44337242.9  kl_theta 21104.6  kl_eta 594.52  kl_alpha 66825.3  cit 19094.1
+2026-08-09 01:08:35  epoch  62  lr 1.50e-04  nelbo 44440546.8  nll 44333004.5  kl_theta 21161.4  kl_eta 591.97  kl_alpha 66780.2  cit 19008.7
+2026-08-09 01:09:13  epoch  63  lr 1.50e-04  nelbo 44429485.6  nll 44322075.7  kl_theta 21182.4  kl_eta 588.96  kl_alpha 66716.7  cit 18921.8
+2026-08-09 01:09:51  epoch  64  lr 1.50e-04  nelbo 44425568.4  nll 44318401.0  kl_theta 21175.4  kl_eta 586.10  kl_alpha 66662.5  cit 18743.2
+2026-08-09 01:10:30  epoch  65  lr 1.50e-04  nelbo 44418971.2  nll 44311986.7  kl_theta 21223.7  kl_eta 583.36  kl_alpha 66417.8  cit 18758.8
+2026-08-09 01:10:30    >> VAL PPL 1617.0  (best 1627.0 @ 60)  *improved*
+2026-08-09 01:11:08  epoch  66  lr 1.50e-04  nelbo 44414463.0  nll 44307525.3  kl_theta 21273.0  kl_eta 582.36  kl_alpha 66419.6  cit 18662.4
+2026-08-09 01:11:47  epoch  67  lr 1.50e-04  nelbo 44411260.1  nll 44304185.0  kl_theta 21292.6  kl_eta 579.39  kl_alpha 66717.8  cit 18484.9
+2026-08-09 01:12:25  epoch  68  lr 1.50e-04  nelbo 44406850.3  nll 44299885.0  kl_theta 21363.5  kl_eta 575.17  kl_alpha 66637.8  cit 18388.4
+2026-08-09 01:13:03  epoch  69  lr 1.50e-04  nelbo 44405706.9  nll 44298449.5  kl_theta 21385.5  kl_eta 572.60  kl_alpha 66916.1  cit 18382.9
+2026-08-09 01:13:42  epoch  70  lr 1.50e-04  nelbo 44392475.0  nll 44285911.2  kl_theta 21395.8  kl_eta 567.72  kl_alpha 66551.1  cit 18049.4
+2026-08-09 01:13:42    >> VAL PPL 1611.4  (best 1617.0 @ 65)  *improved*
+2026-08-09 01:14:20  epoch  71  lr 1.50e-04  nelbo 44394548.5  nll 44287709.2  kl_theta 21469.7  kl_eta 562.70  kl_alpha 66720.4  cit 18086.5
+2026-08-09 01:14:59  epoch  72  lr 1.50e-04  nelbo 44389155.2  nll 44282554.8  kl_theta 21513.8  kl_eta 560.15  kl_alpha 66580.6  cit 17946.1
+2026-08-09 01:15:37  epoch  73  lr 1.50e-04  nelbo 44383732.7  nll 44277319.5  kl_theta 21551.3  kl_eta 556.51  kl_alpha 66377.8  cit 17927.5
+2026-08-09 01:16:15  epoch  74  lr 1.50e-04  nelbo 44383686.5  nll 44277010.5  kl_theta 21590.8  kl_eta 554.47  kl_alpha 66634.3  cit 17896.3
+2026-08-09 01:16:54  epoch  75  lr 1.50e-04  nelbo 44373955.5  nll 44267470.4  kl_theta 21609.2  kl_eta 549.83  kl_alpha 66390.8  cit 17935.1
+2026-08-09 01:16:54    >> VAL PPL 1604.7  (best 1611.4 @ 70)  *improved*
+2026-08-09 01:17:32  epoch  76  lr 1.50e-04  nelbo 44372352.9  nll 44265582.0  kl_theta 21675.0  kl_eta 544.20  kl_alpha 66670.0  cit 17881.7
+2026-08-09 01:18:11  epoch  77  lr 1.50e-04  nelbo 44372298.1  nll 44265511.4  kl_theta 21705.6  kl_eta 539.44  kl_alpha 66696.9  cit 17845.1
+2026-08-09 01:18:49  epoch  78  lr 1.50e-04  nelbo 44362144.3  nll 44255617.7  kl_theta 21762.5  kl_eta 533.47  kl_alpha 66428.2  cit 17802.3
+2026-08-09 01:19:27  epoch  79  lr 1.50e-04  nelbo 44355954.2  nll 44249178.5  kl_theta 21781.9  kl_eta 527.61  kl_alpha 66656.0  cit 17810.1
+2026-08-09 01:20:05  epoch  80  lr 1.50e-04  nelbo 44356472.8  nll 44249613.9  kl_theta 21838.5  kl_eta 519.05  kl_alpha 66766.7  cit 17734.8
+2026-08-09 01:20:06    >> VAL PPL 1599.1  (best 1604.7 @ 75)  *improved*
+2026-08-09 01:20:44  epoch  81  lr 1.50e-04  nelbo 44347438.2  nll 44240763.3  kl_theta 21874.5  kl_eta 514.34  kl_alpha 66484.9  cit 17801.4
+2026-08-09 01:21:22  epoch  82  lr 1.50e-04  nelbo 44351867.3  nll 44245114.5  kl_theta 21926.5  kl_eta 511.05  kl_alpha 66589.2  cit 17725.7
+2026-08-09 01:22:01  epoch  83  lr 1.50e-04  nelbo 44346319.0  nll 44239471.3  kl_theta 21972.7  kl_eta 509.28  kl_alpha 66647.9  cit 17718.1
+2026-08-09 01:22:39  epoch  84  lr 1.50e-04  nelbo 44337053.5  nll 44230455.7  kl_theta 21998.4  kl_eta 507.87  kl_alpha 66365.5  cit 17725.6
+2026-08-09 01:23:17  epoch  85  lr 1.50e-04  nelbo 44336481.8  nll 44229555.2  kl_theta 22056.0  kl_eta 499.17  kl_alpha 66678.4  cit 17693.4
+2026-08-09 01:23:18    >> VAL PPL 1595.4  (best 1599.1 @ 80)  *improved*
+2026-08-09 01:23:56  epoch  86  lr 1.50e-04  nelbo 44332761.9  nll 44225800.4  kl_theta 22069.0  kl_eta 492.49  kl_alpha 66721.3  cit 17678.8
+2026-08-09 01:24:34  epoch  87  lr 1.50e-04  nelbo 44329422.9  nll 44222435.1  kl_theta 22141.8  kl_eta 488.92  kl_alpha 66674.0  cit 17683.1
+2026-08-09 01:25:12  epoch  88  lr 1.50e-04  nelbo 44333932.9  nll 44226728.8  kl_theta 22153.6  kl_eta 485.78  kl_alpha 66892.6  cit 17671.8
+2026-08-09 01:25:50  epoch  89  lr 1.50e-04  nelbo 44324576.3  nll 44217238.8  kl_theta 22221.6  kl_eta 482.32  kl_alpha 66932.2  cit 17701.7
+2026-08-09 01:26:28  epoch  90  lr 1.50e-04  nelbo 44321509.2  nll 44214220.8  kl_theta 22254.8  kl_eta 480.63  kl_alpha 66878.6  cit 17674.3
+2026-08-09 01:26:29    >> VAL PPL 1590.6  (best 1595.4 @ 85)  *improved*
+2026-08-09 01:27:07  epoch  91  lr 1.50e-04  nelbo 44320107.3  nll 44212953.6  kl_theta 22319.4  kl_eta 476.96  kl_alpha 66682.0  cit 17675.0
+2026-08-09 01:27:45  epoch  92  lr 1.50e-04  nelbo 44314534.3  nll 44207461.3  kl_theta 22345.3  kl_eta 474.05  kl_alpha 66614.8  cit 17639.0
+2026-08-09 01:28:23  epoch  93  lr 1.50e-04  nelbo 44309417.8  nll 44202224.1  kl_theta 22383.3  kl_eta 471.56  kl_alpha 66729.3  cit 17609.3
+2026-08-09 01:29:01  epoch  94  lr 1.50e-04  nelbo 44308971.5  nll 44201587.2  kl_theta 22407.1  kl_eta 469.41  kl_alpha 66871.0  cit 17636.7
+2026-08-09 01:29:39  epoch  95  lr 1.50e-04  nelbo 44304212.8  nll 44197066.3  kl_theta 22443.5  kl_eta 467.43  kl_alpha 66639.8  cit 17595.6
+2026-08-09 01:29:40    >> VAL PPL 1586.2  (best 1590.6 @ 90)  *improved*
+2026-08-09 01:30:18  epoch  96  lr 1.50e-04  nelbo 44298391.3  nll 44191181.1  kl_theta 22478.6  kl_eta 463.98  kl_alpha 66680.9  cit 17586.5
+2026-08-09 01:30:56  epoch  97  lr 1.50e-04  nelbo 44296430.0  nll 44189010.8  kl_theta 22506.4  kl_eta 461.92  kl_alpha 66873.8  cit 17577.2
+2026-08-09 01:31:34  epoch  98  lr 1.50e-04  nelbo 44295171.8  nll 44187889.6  kl_theta 22543.6  kl_eta 460.26  kl_alpha 66720.4  cit 17557.8
+2026-08-09 01:32:12  epoch  99  lr 1.50e-04  nelbo 44291331.6  nll 44184147.4  kl_theta 22572.6  kl_eta 456.99  kl_alpha 66629.9  cit 17524.7
+2026-08-09 01:32:51  epoch 100  lr 1.50e-04  nelbo 44285937.0  nll 44178528.9  kl_theta 22614.5  kl_eta 452.18  kl_alpha 66794.3  cit 17547.0
+2026-08-09 01:32:51    >> VAL PPL 1584.7  (best 1586.2 @ 95)  *improved*
+2026-08-09 01:33:29  epoch 101  lr 1.50e-04  nelbo 44285127.5  nll 44177872.6  kl_theta 22596.0  kl_eta 448.80  kl_alpha 66668.8  cit 17541.1
+2026-08-09 01:34:07  epoch 102  lr 1.50e-04  nelbo 44281022.9  nll 44173492.3  kl_theta 22864.2  kl_eta 453.35  kl_alpha 66684.1  cit 17528.9
+2026-08-09 01:34:45  epoch 103  lr 1.50e-04  nelbo 44279111.3  nll 44171543.8  kl_theta 22828.6  kl_eta 450.48  kl_alpha 66756.9  cit 17531.8
+2026-08-09 01:35:23  epoch 104  lr 1.50e-04  nelbo 44283752.1  nll 44176135.7  kl_theta 22835.9  kl_eta 449.87  kl_alpha 66809.1  cit 17521.5
+2026-08-09 01:36:02  epoch 105  lr 1.50e-04  nelbo 44277992.4  nll 44170510.5  kl_theta 22823.4  kl_eta 448.80  kl_alpha 66704.2  cit 17505.6
+2026-08-09 01:36:02    >> VAL PPL 1580.6  (best 1584.7 @ 100)  *improved*
+2026-08-09 01:36:40  epoch 106  lr 1.50e-04  nelbo 44274406.3  nll 44166797.5  kl_theta 22815.7  kl_eta 446.90  kl_alpha 66797.9  cit 17547.9
+2026-08-09 01:37:18  epoch 107  lr 1.50e-04  nelbo 44272325.6  nll 44164703.0  kl_theta 22813.0  kl_eta 444.15  kl_alpha 66885.5  cit 17479.8
+2026-08-09 01:37:56  epoch 108  lr 1.50e-04  nelbo 44271277.2  nll 44163612.4  kl_theta 22812.2  kl_eta 444.73  kl_alpha 66966.3  cit 17442.1
+2026-08-09 01:38:34  epoch 109  lr 1.50e-04  nelbo 44262613.2  nll 44155158.1  kl_theta 22822.1  kl_eta 444.89  kl_alpha 66840.8  cit 17347.4
+2026-08-09 01:39:12  epoch 110  lr 1.50e-04  nelbo 44269317.8  nll 44161592.9  kl_theta 22850.4  kl_eta 443.43  kl_alpha 67024.8  cit 17406.3
+2026-08-09 01:39:13    >> VAL PPL 1580.2  (best 1580.6 @ 105)
+2026-08-09 01:39:51  epoch 111  lr 1.50e-04  nelbo 44262826.1  nll 44155318.5  kl_theta 22903.3  kl_eta 442.70  kl_alpha 66742.7  cit 17419.1
+2026-08-09 01:40:29  epoch 112  lr 1.50e-04  nelbo 44260450.8  nll 44152845.2  kl_theta 22903.1  kl_eta 442.97  kl_alpha 66885.9  cit 17373.8
+2026-08-09 01:41:07  epoch 113  lr 1.50e-04  nelbo 44264223.3  nll 44156415.8  kl_theta 22903.5  kl_eta 439.65  kl_alpha 67161.5  cit 17302.8
+2026-08-09 01:41:45  epoch 114  lr 1.50e-04  nelbo 44253858.0  nll 44146476.8  kl_theta 22892.3  kl_eta 437.80  kl_alpha 66908.6  cit 17142.5
+2026-08-09 01:42:23  epoch 115  lr 1.50e-04  nelbo 44255312.6  nll 44147749.2  kl_theta 23143.0  kl_eta 441.27  kl_alpha 66910.3  cit 17068.8
+2026-08-09 01:42:24    >> VAL PPL 1575.9  (best 1580.2 @ 110)  *improved*
+2026-08-09 01:43:02  epoch 116  lr 1.50e-04  nelbo 44263285.8  nll 44155922.9  kl_theta 23005.7  kl_eta 438.41  kl_alpha 66887.2  cit 17031.8
+2026-08-09 01:43:40  epoch 117  lr 1.50e-04  nelbo 44247356.1  nll 44139849.0  kl_theta 22981.0  kl_eta 436.35  kl_alpha 67069.8  cit 17019.9
+2026-08-09 01:44:18  epoch 118  lr 1.50e-04  nelbo 44245785.3  nll 44138394.2  kl_theta 22961.3  kl_eta 435.29  kl_alpha 67028.2  cit 16966.5
+2026-08-09 01:44:56  epoch 119  lr 1.50e-04  nelbo 44246831.8  nll 44139664.9  kl_theta 22940.3  kl_eta 435.07  kl_alpha 66873.0  cit 16918.4
+2026-08-09 01:45:34  epoch 120  lr 1.50e-04  nelbo 44242333.2  nll 44134962.8  kl_theta 22931.1  kl_eta 436.07  kl_alpha 67069.4  cit 16934.0
+2026-08-09 01:45:35    >> VAL PPL 1574.5  (best 1575.9 @ 115)  *improved*
+2026-08-09 01:46:13  epoch 121  lr 1.50e-04  nelbo 44241730.9  nll 44134598.6  kl_theta 22911.9  kl_eta 435.46  kl_alpha 66864.3  cit 16920.2
+2026-08-09 01:46:51  epoch 122  lr 1.50e-04  nelbo 44243354.4  nll 44136050.9  kl_theta 22879.9  kl_eta 436.21  kl_alpha 67052.4  cit 16935.1
+2026-08-09 01:47:29  epoch 123  lr 1.50e-04  nelbo 44241096.9  nll 44133795.1  kl_theta 22985.0  kl_eta 436.15  kl_alpha 66965.0  cit 16916.0
+2026-08-09 01:48:07  epoch 124  lr 1.50e-04  nelbo 44234786.2  nll 44126747.6  kl_theta 23372.8  kl_eta 446.01  kl_alpha 67322.6  cit 16897.4
+2026-08-09 01:48:45  epoch 125  lr 1.50e-04  nelbo 44236040.9  nll 44128496.5  kl_theta 23080.2  kl_eta 434.90  kl_alpha 67147.8  cit 16881.2
+2026-08-09 01:48:46    >> VAL PPL 1570.7  (best 1574.5 @ 120)  *improved*
+2026-08-09 01:49:24  epoch 126  lr 1.50e-04  nelbo 44234137.9  nll 44126676.2  kl_theta 23004.5  kl_eta 440.93  kl_alpha 67158.5  cit 16858.0
+2026-08-09 01:50:02  epoch 127  lr 1.50e-04  nelbo 44237865.4  nll 44130377.8  kl_theta 22984.0  kl_eta 436.49  kl_alpha 67210.1  cit 16857.0
+2026-08-09 01:50:40  epoch 128  lr 1.50e-04  nelbo 44232240.4  nll 44124819.6  kl_theta 22970.1  kl_eta 433.85  kl_alpha 67191.1  cit 16825.7
+2026-08-09 01:51:18  epoch 129  lr 1.50e-04  nelbo 44230724.2  nll 44123315.9  kl_theta 22992.0  kl_eta 433.24  kl_alpha 67238.5  cit 16744.8
+2026-08-09 01:51:56  epoch 130  lr 1.50e-04  nelbo 44227969.6  nll 44120722.7  kl_theta 23001.1  kl_eta 436.75  kl_alpha 67144.6  cit 16664.5
+2026-08-09 01:51:56    >> VAL PPL 1570.6  (best 1570.7 @ 125)
+2026-08-09 01:52:34  epoch 131  lr 1.50e-04  nelbo 44225694.1  nll 44118248.3  kl_theta 22991.2  kl_eta 436.34  kl_alpha 67322.1  cit 16695.8
+2026-08-09 01:53:12  epoch 132  lr 1.50e-04  nelbo 44230977.5  nll 44123594.1  kl_theta 22985.3  kl_eta 435.07  kl_alpha 67329.6  cit 16633.7
+2026-08-09 01:53:51  epoch 133  lr 1.50e-04  nelbo 44222611.1  nll 44115364.0  kl_theta 22978.4  kl_eta 432.41  kl_alpha 67211.3  cit 16625.0
+2026-08-09 01:54:29  epoch 134  lr 1.50e-04  nelbo 44225435.9  nll 44117884.0  kl_theta 23007.7  kl_eta 435.25  kl_alpha 67414.4  cit 16694.5
+2026-08-09 01:55:07  epoch 135  lr 1.50e-04  nelbo 44222860.0  nll 44115458.3  kl_theta 22988.8  kl_eta 435.06  kl_alpha 67318.6  cit 16659.3
+2026-08-09 01:55:07    >> VAL PPL 1566.9  (best 1570.6 @ 130)  *improved*
+2026-08-09 01:55:45  epoch 136  lr 1.50e-04  nelbo 44218976.5  nll 44111615.8  kl_theta 23013.0  kl_eta 436.70  kl_alpha 67351.7  cit 16559.2
+2026-08-09 01:56:23  epoch 137  lr 1.50e-04  nelbo 44225025.5  nll 44117579.4  kl_theta 23027.8  kl_eta 437.28  kl_alpha 67417.0  cit 16563.8
+2026-08-09 01:57:01  epoch 138  lr 1.50e-04  nelbo 44213526.2  nll 44106145.9  kl_theta 23048.4  kl_eta 438.48  kl_alpha 67350.3  cit 16543.0
+2026-08-09 01:57:39  epoch 139  lr 1.50e-04  nelbo 44218756.5  nll 44110968.1  kl_theta 23048.1  kl_eta 436.07  kl_alpha 67753.4  cit 16550.8
+2026-08-09 01:58:18  epoch 140  lr 1.50e-04  nelbo 44212971.2  nll 44105328.7  kl_theta 23048.5  kl_eta 434.24  kl_alpha 67609.7  cit 16550.1
+2026-08-09 01:58:18    >> VAL PPL 1567.6  (best 1566.9 @ 135)
+2026-08-09 01:58:56  epoch 141  lr 1.50e-04  nelbo 44216355.7  nll 44108714.8  kl_theta 23055.8  kl_eta 433.14  kl_alpha 67615.0  cit 16536.7
+2026-08-09 01:59:34  epoch 142  lr 1.50e-04  nelbo 44209450.9  nll 44101824.6  kl_theta 23079.6  kl_eta 435.98  kl_alpha 67569.4  cit 16541.3
+2026-08-09 02:00:12  epoch 143  lr 1.50e-04  nelbo 44206749.6  nll 44099096.4  kl_theta 23226.8  kl_eta 438.15  kl_alpha 67459.5  cit 16528.6
+2026-08-09 02:00:50  epoch 144  lr 1.50e-04  nelbo 44213885.0  nll 44106060.5  kl_theta 23224.8  kl_eta 432.77  kl_alpha 67645.7  cit 16520.9
+2026-08-09 02:01:28  epoch 145  lr 1.50e-04  nelbo 44211103.2  nll 44103274.8  kl_theta 23156.0  kl_eta 430.61  kl_alpha 67708.0  cit 16533.8
+2026-08-09 02:01:29    >> VAL PPL 1565.2  (best 1566.9 @ 135)  *improved*
+2026-08-09 02:02:07  epoch 146  lr 1.50e-04  nelbo 44206960.5  nll 44099067.2  kl_theta 23166.7  kl_eta 434.40  kl_alpha 67756.9  cit 16535.5
+2026-08-09 02:02:45  epoch 147  lr 1.50e-04  nelbo 44215354.6  nll 44107445.2  kl_theta 23264.3  kl_eta 432.82  kl_alpha 67667.2  cit 16545.5
+2026-08-09 02:03:23  epoch 148  lr 1.50e-04  nelbo 44203687.8  nll 44095707.2  kl_theta 23308.6  kl_eta 432.11  kl_alpha 67704.2  cit 16535.8
+2026-08-09 02:04:01  epoch 149  lr 1.50e-04  nelbo 44205257.0  nll 44097139.3  kl_theta 23274.3  kl_eta 425.94  kl_alpha 67883.8  cit 16533.3
+2026-08-09 02:04:39  epoch 150  lr 1.50e-04  nelbo 44199360.8  nll 44091490.2  kl_theta 23243.9  kl_eta 429.14  kl_alpha 67665.8  cit 16531.6
+2026-08-09 02:04:39    >> VAL PPL 1565.1  (best 1565.2 @ 145)
+2026-08-09 02:05:17  epoch 151  lr 1.50e-04  nelbo 44197768.1  nll 44089745.7  kl_theta 23284.8  kl_eta 432.03  kl_alpha 67775.1  cit 16530.3
+2026-08-09 02:05:56  epoch 152  lr 1.50e-04  nelbo 44223841.7  nll 44113801.5  kl_theta 25332.1  kl_eta 507.01  kl_alpha 67672.4  cit 16528.9
+2026-08-09 02:06:34  epoch 153  lr 1.50e-04  nelbo 44203758.0  nll 44094269.6  kl_theta 24713.6  kl_eta 462.49  kl_alpha 67763.7  cit 16548.6
+2026-08-09 02:07:12  epoch 154  lr 1.50e-04  nelbo 44191346.5  nll 44082025.4  kl_theta 24426.4  kl_eta 454.57  kl_alpha 67902.4  cit 16537.8
+2026-08-09 02:07:50  epoch 155  lr 1.50e-04  nelbo 44193856.1  nll 44084589.3  kl_theta 24223.7  kl_eta 455.09  kl_alpha 68042.6  cit 16545.3
+2026-08-09 02:07:50    >> VAL PPL 1564.8  (best 1565.1 @ 150)
+2026-08-09 02:08:29  epoch 156  lr 1.50e-04  nelbo 44193863.2  nll 44084964.3  kl_theta 24047.5  kl_eta 454.46  kl_alpha 67851.3  cit 16545.6
+2026-08-09 02:09:07  epoch 157  lr 1.50e-04  nelbo 44197880.4  nll 44088937.2  kl_theta 23991.8  kl_eta 458.40  kl_alpha 67944.8  cit 16548.4
+2026-08-09 02:09:45  epoch 158  lr 1.50e-04  nelbo 44204049.0  nll 44094708.1  kl_theta 24331.7  kl_eta 461.29  kl_alpha 68010.6  cit 16537.3
+2026-08-09 02:10:23  epoch 159  lr 1.50e-04  nelbo 44197562.2  nll 44088169.1  kl_theta 24325.8  kl_eta 487.65  kl_alpha 68045.5  cit 16533.9
+2026-08-09 02:11:01  epoch 160  lr 1.50e-04  nelbo 44199170.8  nll 44089852.6  kl_theta 24245.4  kl_eta 459.46  kl_alpha 68051.8  cit 16561.7
+2026-08-09 02:11:01    >> VAL PPL 1565.3  (best 1564.8 @ 155)
+2026-08-09 02:11:01    >> annealing lr -> 3.75e-05
+2026-08-09 02:11:39  epoch 161  lr 3.75e-05  nelbo 44165641.9  nll 44056613.1  kl_theta 24180.2  kl_eta 453.91  kl_alpha 67835.7  cit 16559.1
+2026-08-09 02:12:17  epoch 162  lr 3.75e-05  nelbo 44165409.8  nll 44056216.0  kl_theta 24140.5  kl_eta 451.51  kl_alpha 68045.9  cit 16555.9
+2026-08-09 02:12:56  epoch 163  lr 3.75e-05  nelbo 44166760.2  nll 44057501.6  kl_theta 24259.6  kl_eta 449.20  kl_alpha 67998.1  cit 16551.7
+2026-08-09 02:13:34  epoch 164  lr 3.75e-05  nelbo 44164034.6  nll 44054680.6  kl_theta 24273.2  kl_eta 448.43  kl_alpha 68082.3  cit 16550.1
+2026-08-09 02:14:12  epoch 165  lr 3.75e-05  nelbo 44159488.6  nll 44050265.7  kl_theta 24103.6  kl_eta 448.16  kl_alpha 68118.7  cit 16552.1
+2026-08-09 02:14:12    >> VAL PPL 1556.9  (best 1564.8 @ 155)  *improved*
+2026-08-09 02:14:50  epoch 166  lr 3.75e-05  nelbo 44163607.0  nll 44054563.0  kl_theta 24036.4  kl_eta 444.54  kl_alpha 68014.5  cit 16548.6
+2026-08-09 02:15:28  epoch 167  lr 3.75e-05  nelbo 44158610.8  nll 44049567.5  kl_theta 23976.7  kl_eta 443.63  kl_alpha 68073.2  cit 16549.7
+2026-08-09 02:16:06  epoch 168  lr 3.75e-05  nelbo 44161120.1  nll 44052044.3  kl_theta 23934.7  kl_eta 443.38  kl_alpha 68148.6  cit 16548.7
+2026-08-09 02:16:45  epoch 169  lr 3.75e-05  nelbo 44172016.0  nll 44062832.6  kl_theta 23985.0  kl_eta 444.38  kl_alpha 68206.0  cit 16548.1
+2026-08-09 02:17:23  epoch 170  lr 3.75e-05  nelbo 44170171.3  nll 44060684.8  kl_theta 24344.1  kl_eta 455.74  kl_alpha 68138.7  cit 16547.7
+2026-08-09 02:17:23    >> VAL PPL 1557.2  (best 1556.9 @ 165)
+2026-08-09 02:18:01  epoch 171  lr 3.75e-05  nelbo 44158375.8  nll 44049303.0  kl_theta 23963.8  kl_eta 449.70  kl_alpha 68113.4  cit 16545.8
+2026-08-09 02:18:39  epoch 172  lr 3.75e-05  nelbo 44163734.7  nll 44054663.5  kl_theta 24027.1  kl_eta 447.03  kl_alpha 68051.9  cit 16545.4
+2026-08-09 02:19:17  epoch 173  lr 3.75e-05  nelbo 44158633.2  nll 44049708.3  kl_theta 23885.2  kl_eta 446.48  kl_alpha 68045.2  cit 16548.3
+2026-08-09 02:19:55  epoch 174  lr 3.75e-05  nelbo 44160928.5  nll 44051860.1  kl_theta 23940.6  kl_eta 445.85  kl_alpha 68134.4  cit 16547.9
+2026-08-09 02:20:33  epoch 175  lr 3.75e-05  nelbo 44155707.2  nll 44046955.9  kl_theta 23819.3  kl_eta 444.06  kl_alpha 67942.1  cit 16545.5
+2026-08-09 02:20:33    >> VAL PPL 1556.7  (best 1556.9 @ 165)
+2026-08-09 02:21:12  epoch 176  lr 3.75e-05  nelbo 44162891.8  nll 44053938.7  kl_theta 23826.5  kl_eta 442.86  kl_alpha 68138.9  cit 16545.0
+2026-08-09 02:21:50  epoch 177  lr 3.75e-05  nelbo 44163641.0  nll 44054765.3  kl_theta 23725.3  kl_eta 441.01  kl_alpha 68165.0  cit 16544.2
+2026-08-09 02:22:28  epoch 178  lr 3.75e-05  nelbo 44159302.1  nll 44050555.0  kl_theta 23697.1  kl_eta 440.82  kl_alpha 68064.3  cit 16545.0
+2026-08-09 02:23:06  epoch 179  lr 3.75e-05  nelbo 44158607.8  nll 44049981.5  kl_theta 23671.3  kl_eta 440.93  kl_alpha 67968.2  cit 16545.6
+2026-08-09 02:23:44  epoch 180  lr 3.75e-05  nelbo 44161336.2  nll 44052581.9  kl_theta 23616.9  kl_eta 441.17  kl_alpha 68149.9  cit 16546.2
+2026-08-09 02:23:45    >> VAL PPL 1556.9  (best 1556.7 @ 175)
+2026-08-09 02:23:45    >> annealing lr -> 9.37e-06
+2026-08-09 02:24:23  epoch 181  lr 9.37e-06  nelbo 44142678.2  nll 44034194.5  kl_theta 23616.1  kl_eta 441.17  kl_alpha 67880.0  cit 16546.3
+2026-08-09 02:25:01  epoch 182  lr 9.37e-06  nelbo 44143978.8  nll 44035044.9  kl_theta 23969.1  kl_eta 444.41  kl_alpha 67988.8  cit 16531.6
+2026-08-09 02:25:39  epoch 183  lr 9.37e-06  nelbo 44145314.2  nll 44036595.9  kl_theta 23626.5  kl_eta 443.93  kl_alpha 68105.7  cit 16542.2
+2026-08-09 02:26:17  epoch 184  lr 9.37e-06  nelbo 44157174.6  nll 44048515.5  kl_theta 23599.5  kl_eta 443.22  kl_alpha 68072.7  cit 16543.7
+2026-08-09 02:26:55  epoch 185  lr 9.37e-06  nelbo 44153735.1  nll 44045033.1  kl_theta 23587.9  kl_eta 442.99  kl_alpha 68127.7  cit 16543.2
+2026-08-09 02:26:55    >> VAL PPL 1555.1  (best 1556.7 @ 175)  *improved*
+2026-08-09 02:27:33  epoch 186  lr 9.37e-06  nelbo 44148122.3  nll 44039398.1  kl_theta 23590.7  kl_eta 442.45  kl_alpha 68147.8  cit 16543.4
+2026-08-09 02:28:11  epoch 187  lr 9.37e-06  nelbo 44141453.6  nll 44032794.7  kl_theta 23563.4  kl_eta 442.40  kl_alpha 68111.0  cit 16541.9
+2026-08-09 02:28:50  epoch 188  lr 9.37e-06  nelbo 44157157.9  nll 44048360.6  kl_theta 23566.0  kl_eta 442.32  kl_alpha 68246.5  cit 16542.6
+2026-08-09 02:29:28  epoch 189  lr 9.37e-06  nelbo 44144431.2  nll 44035613.5  kl_theta 23561.2  kl_eta 441.72  kl_alpha 68269.3  cit 16545.4
+2026-08-09 02:30:06  epoch 190  lr 9.37e-06  nelbo 44155083.6  nll 44046372.3  kl_theta 23591.3  kl_eta 442.44  kl_alpha 68135.6  cit 16541.8
+2026-08-09 02:30:06    >> VAL PPL 1555.0  (best 1555.1 @ 185)
+2026-08-09 02:30:45  epoch 191  lr 9.37e-06  nelbo 44147315.5  nll 44038530.4  kl_theta 23560.4  kl_eta 442.39  kl_alpha 68242.8  cit 16539.9
+2026-08-09 02:31:23  epoch 192  lr 9.37e-06  nelbo 44147678.9  nll 44039019.2  kl_theta 23524.1  kl_eta 443.01  kl_alpha 68153.4  cit 16538.9
+2026-08-09 02:32:01  epoch 193  lr 9.37e-06  nelbo 44153551.6  nll 44044924.4  kl_theta 23523.1  kl_eta 442.64  kl_alpha 68120.3  cit 16541.4
+2026-08-09 02:32:39  epoch 194  lr 9.37e-06  nelbo 44149330.2  nll 44040683.7  kl_theta 23507.6  kl_eta 443.16  kl_alpha 68157.5  cit 16538.1
+2026-08-09 02:33:17  epoch 195  lr 9.37e-06  nelbo 44147216.5  nll 44038468.9  kl_theta 23498.7  kl_eta 443.52  kl_alpha 68265.8  cit 16539.2
+2026-08-09 02:33:17    >> VAL PPL 1555.1  (best 1555.0 @ 190)
+2026-08-09 02:33:55  epoch 196  lr 9.37e-06  nelbo 44148643.0  nll 44040022.7  kl_theta 23493.2  kl_eta 443.60  kl_alpha 68144.2  cit 16539.5
+2026-08-09 02:34:33  epoch 197  lr 9.37e-06  nelbo 44152496.2  nll 44043871.9  kl_theta 23470.7  kl_eta 444.02  kl_alpha 68171.1  cit 16538.4
+2026-08-09 02:35:11  epoch 198  lr 9.37e-06  nelbo 44147199.8  nll 44038597.7  kl_theta 23469.4  kl_eta 444.41  kl_alpha 68149.4  cit 16538.8
+2026-08-09 02:35:49  epoch 199  lr 9.37e-06  nelbo 44152490.2  nll 44043916.6  kl_theta 23452.8  kl_eta 444.46  kl_alpha 68139.2  cit 16537.0
+2026-08-09 02:36:27  epoch 200  lr 9.37e-06  nelbo 44152914.0  nll 44044293.9  kl_theta 23451.9  kl_eta 444.63  kl_alpha 68186.3  cit 16537.3
+2026-08-09 02:36:28    >> VAL PPL 1555.1  (best 1555.0 @ 190)
+2026-08-09 02:37:06  epoch 201  lr 9.37e-06  nelbo 44145292.8  nll 44036636.4  kl_theta 23484.5  kl_eta 444.88  kl_alpha 68189.3  cit 16537.6
+2026-08-09 02:37:44  epoch 202  lr 9.37e-06  nelbo 44149310.2  nll 44040679.9  kl_theta 23456.9  kl_eta 444.82  kl_alpha 68190.8  cit 16537.7
+2026-08-09 02:38:22  epoch 203  lr 9.37e-06  nelbo 44145792.0  nll 44037132.2  kl_theta 23422.2  kl_eta 444.78  kl_alpha 68255.5  cit 16537.6
+2026-08-09 02:39:00  epoch 204  lr 9.37e-06  nelbo 44151757.6  nll 44043119.2  kl_theta 23422.7  kl_eta 445.13  kl_alpha 68232.9  cit 16538.1
+2026-08-09 02:39:38  epoch 205  lr 9.37e-06  nelbo 44147867.8  nll 44039274.2  kl_theta 23411.7  kl_eta 446.33  kl_alpha 68197.9  cit 16537.5
+2026-08-09 02:39:39    >> VAL PPL 1555.1  (best 1555.0 @ 190)
+2026-08-09 02:40:17  epoch 206  lr 9.37e-06  nelbo 44149227.0  nll 44040579.9  kl_theta 23403.5  kl_eta 446.54  kl_alpha 68259.7  cit 16537.6
+2026-08-09 02:40:55  epoch 207  lr 9.37e-06  nelbo 44151467.2  nll 44042838.8  kl_theta 23399.0  kl_eta 446.95  kl_alpha 68245.7  cit 16536.6
+2026-08-09 02:41:33  epoch 208  lr 9.37e-06  nelbo 44148717.1  nll 44040027.5  kl_theta 23428.3  kl_eta 447.90  kl_alpha 68276.6  cit 16537.1
+2026-08-09 02:42:11  epoch 209  lr 9.37e-06  nelbo 44148022.8  nll 44039282.4  kl_theta 23419.6  kl_eta 447.88  kl_alpha 68335.5  cit 16537.4
+2026-08-09 02:42:49  epoch 210  lr 9.37e-06  nelbo 44148078.1  nll 44039457.8  kl_theta 23409.2  kl_eta 448.50  kl_alpha 68223.1  cit 16539.5
+2026-08-09 02:42:50    >> VAL PPL 1555.2  (best 1555.0 @ 190)
+2026-08-09 02:43:28  epoch 211  lr 9.37e-06  nelbo 44142178.7  nll 44033530.5  kl_theta 23395.7  kl_eta 448.96  kl_alpha 68266.2  cit 16537.2
+2026-08-09 02:44:06  epoch 212  lr 9.37e-06  nelbo 44149604.1  nll 44041071.6  kl_theta 23369.6  kl_eta 448.98  kl_alpha 68175.4  cit 16538.8
+2026-08-09 02:44:44  epoch 213  lr 9.37e-06  nelbo 44143619.2  nll 44034944.6  kl_theta 23385.6  kl_eta 448.57  kl_alpha 68303.2  cit 16537.3
+2026-08-09 02:45:22  epoch 214  lr 9.37e-06  nelbo 44144361.8  nll 44035722.1  kl_theta 23388.6  kl_eta 449.67  kl_alpha 68263.1  cit 16538.4
+2026-08-09 02:46:00  epoch 215  lr 9.37e-06  nelbo 44145196.2  nll 44036559.9  kl_theta 23358.0  kl_eta 449.90  kl_alpha 68292.1  cit 16536.0
+2026-08-09 02:46:00    >> VAL PPL 1554.8  (best 1555.0 @ 190)
+2026-08-09 02:46:00  early stopping: no val improvement > 1.0 for 6 evaluations
+2026-08-09 02:46:00  training done in 136.6 min; best val ppl 1554.8 at epoch 215
+2026-08-09 02:46:01  saved runs/dsntm_k30_cit/best_model.pt

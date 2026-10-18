@@ -1,0 +1,23 @@
+# Direct runtime dependencies for preprocessing, embedding training,
+# citation graph construction, model training, evaluation, and analysis.
+# Install with: python -m pip install -r requirements.txt
+# These are dependency requirements, not a locked reproduction environment.
+# Use package releases compatible with your Python version.
+
+# Model training and tensor operations. Install the appropriate CPU/CUDA
+# build for your machine; preserve the working server build when applicable.
+torch>=1.9
+
+# Numerical arrays, sparse matrices, and text vectorization
+numpy
+scipy
+scikit-learn
+
+# Required to deserialize the corpus's pandas DataFrame from pickle
+pandas
+
+# Skip-gram Word2Vec embeddings (uses the Gensim 4 API)
+gensim>=4.0
+
+# SciEvo citation/reference datasets from Hugging Face
+datasets

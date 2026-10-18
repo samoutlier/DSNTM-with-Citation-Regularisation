@@ -1,0 +1,38 @@
+# Python bytecode and tool caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+
+# Local environments and build outputs
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+
+# Local credentials and editor settings
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Raw corpus and generated datasets
+/scievo_cscl_cslg_2014_2021.pkl
+/data/processed/
+/data/citations/
+
+# Large run artifacts; small reports and train.log remain trackable
+/runs/**/*.pt
+/runs/**/*.pth
+/runs/**/*.ckpt
+/runs/**/*.npy
+/runs/**/*.npz
